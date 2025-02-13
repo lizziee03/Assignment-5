@@ -1,0 +1,31 @@
+<section class="media-listing-holder">
+    <div class="title">
+        <h2>{{title}}</h2>
+        <h3>{{type}}: {{parent}}</h3>
+    </div>
+    <div class="buttons-holder">
+        <div class="delete-button">
+            <form action="/listings/delete/confirm" method="POST">
+                <div class="post-data">
+                    <input type="hidden" name="media_type" value="{{type}}">
+                    <input type="hidden" name="parent" value="{{parent}}">
+                    <input type="hidden" name="title" value="{{title}}">
+                </div>
+                <button id="delete-media" onclick="return confirm('are you sure you want to delete the listing {{title}} from catalog {{type}}: {{parent}}?')"><i class="fa-regular fa-trash-can"></i></button>
+            </form>
+        </div>
+    </div>
+    <div class="listing-content">
+        <p>title: {{title}}</p>
+        <br>
+        <p>director: {{director}}</p>
+        <br>
+        <p>watched?: {{is_watched}}</p>
+        <br>
+        {{#if rank}}
+            <p>rank: {{rank}}</p>
+            <br>
+        {{/if}}
+        <p>notes: {{notes}}</p>
+    </div>
+</section>

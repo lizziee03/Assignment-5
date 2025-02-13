@@ -1,0 +1,33 @@
+<main class="add-new-listing">
+    <p>*required fields</p>
+        <form action="/add-listing-submit" method="POST">
+            <div>
+                <label for="title">*title:</label>
+                <input type="text" name="title" id="title" autocomplete="off" required/>
+            </div>
+            <div>
+                <label for="made_by">*director:</label>
+                <input type="text" name="made_by" id="made_by" autocomplete="off" required/>
+            </div>
+            <div>
+                <label for="is_watched">*watched?:</label>
+                <select name="is_watched" id="is_watched" required>
+                    <option value="no" selected="selected">no</option>
+                    <option value="yes">yes</option>
+                </select>
+            </div>
+            <div>
+                <label for="given_rank">rank:</label>
+                <input type="number" name="given_rank" id="given_rank"/>
+            </div>
+            <div>
+                <label for="notes">notes:</label>
+                <input type="text" name="notes" id="notes" autocomplete="off"/>
+            </div>
+            <div>
+                <input type="hidden" name="media_type" value="{{type}}">
+                <input type="hidden" name="parent" value="{{parent}}">
+            </div>
+            <button>submit</button>
+        </form>
+</main>

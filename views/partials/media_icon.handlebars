@@ -1,0 +1,18 @@
+<section class="media-display">
+    <div class="media-caption">
+        <h4 class="media-type">{{type}}</h4>
+        <div class="enter-listing">
+            <a href="/listings/{{type}}/{{parent}}/{{title}}"><h3 class="media-title">{{title}}</h3></a>
+        </div>
+    </div>
+    <div class="delete-button">
+        <form action="/listings/delete/confirm" method="POST">
+            <div class="post-data">
+                <input type="hidden" name="media_type" value="{{type}}">
+                <input type="hidden" name="parent" value="{{parent}}">
+                <input type="hidden" name="title" value="{{title}}">
+            </div>
+            <button id="delete-media" onclick="return confirm('are you sure you want to delete the listing {{title}} from catalog {{type}}: {{parent}}?')"><i class="fa-regular fa-trash-can"></i></button>
+        </form>
+    </div>
+</section>

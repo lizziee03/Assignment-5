@@ -1,0 +1,26 @@
+<main class="homepage">
+
+    <div class="title">
+        {{#if type}}
+            <h2>my {{type}} catalogs</h2>
+        {{else}}
+            <h2>my catalogs</h2>
+        {{/if}}
+    </div>
+
+    <div class="my-catalogs">
+        <div class="user-catalogs">
+            {{#each catalogs}}
+                {{> catalog_icon}}
+            {{/each}}
+        </div>
+        <div class="add-new-catalog">
+            {{#if type}}
+                <a href="/add-catalog/{{type}}">add new {{type}} catalog</a>
+            {{else}}
+                <a href="/add-catalog">add new catalog</a>
+            {{/if}}
+        </div>
+    </div>
+    
+</main>

@@ -1,0 +1,17 @@
+<section class="catalog-display">
+    <div class="catalog-text">
+        <h4 class="catalog-type">{{type}}</h4>
+        <div class="enter-catalog">
+            <a href="/catalogs/{{type}}/{{name}}"><h3 class="catalog-name">{{name}}</h3></a>
+        </div>
+    </div>
+    <div class="delete-icon">
+        <form action="/catalogs/delete/confirm" method="POST">
+            <div class="post-data">
+                <input type="hidden" name="media_type" value="{{type}}">
+                <input type="hidden" name="name" value="{{name}}">
+            </div>
+            <button id="delete-media" onclick="return confirm('are you sure you want to delete the catalog {{type}}: {{name}}?')"><i class="fa-regular fa-trash-can"></i></button>
+        </form>
+    </div>
+</section>

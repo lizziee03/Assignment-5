@@ -1,0 +1,37 @@
+.navbar {
+    width: 100%;
+}
+
+.navlist {
+    display: inline-block;
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+  
+.navitem {
+    display: inline-block;
+    margin: 0 5px;
+}
+  
+.navitem a {
+    display: block;
+    padding-left: 0;
+    padding-right: 10px;
+    text-decoration: none;
+}
+
+.catalog-display {
+    display: inline-block;
+    border: 3px solid black;
+    margin: 10px;
+    padding: 10px;
+}
+
+.media-display {
+    display: inline-block;
+    border: 3px solid black;
+    margin: 10px;
+    padding: 10px;
+}
+

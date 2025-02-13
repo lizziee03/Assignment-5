@@ -1,0 +1,29 @@
+<main class="add-new-catalog">
+    <p>*required fields</p>
+        <form action="/add-catalog-submit" method="POST">
+            <div>
+                <label for="catalog_name">*name: </label>
+                <input type="text" name="catalog_name" id="catalog_name" autocomplete="off" required/>
+            </div>
+            <div>
+                {{#if type}}
+                    <label for="catalog_type">*type: {{type}}</label>
+                    <input type="hidden" name="catalog_type" id="catalog_type" value="{{type}}"/>
+                {{else}}
+                    <label for="catalog_type">*type:</label>
+                    <select name="catalog_type" id="catalog_type" required>
+                        <option value="movies">movies</option>
+                        <option value="tv_shows">tv shows</option>
+                    </select>
+                {{/if}}
+            </div>
+            <div>
+                <label for="is_ranked">ranked?:</label>
+                <select name="is_ranked" id="is_ranked">
+                    <option value="no" selected="selected">no</option>
+                    <option value="yes">yes</option>
+                </select>
+            </div>
+            <button>submit</button>
+        </form>
+</main>
